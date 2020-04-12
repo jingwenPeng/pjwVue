@@ -19,6 +19,15 @@ export default new Router({
         title: '编辑页',
         icon: 'test'
       }
+    },
+    {
+      path: '/Test',
+      name: 'Test',
+      component: () => import('@/view/StoreTest/Test'),
+      meta: {
+        title: 'StoreTest',
+        icon: 'test'
+      }
     }
   ]
 })

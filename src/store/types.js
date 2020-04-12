@@ -1,1 +1,7 @@
-export const SET_TEST = 'SET_TEST'
+const INCREMENT = 'INCREMENT'
+const DECREMENT = 'DECREMENT'
+
+export default {
+  INCREMENT,
+  DECREMENT
+}
