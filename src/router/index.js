@@ -1,15 +1,16 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import NotFoundComponent from '../view/NotFound'
 
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'Test1',
+      component: () => import('@/view/otherTest/Test1')
     },
     {
       path: '/editPage',
@@ -28,6 +29,16 @@ export default new Router({
         title: 'StoreTest',
         icon: 'test'
       }
-    }
+    },
+    {
+      path: '/otherTest/Test1',
+      name: 'Test1',
+      component: () => import('@/view/otherTest/Test1'),
+      meta: {
+        title: 'StoreTest',
+        icon: 'test'
+      }
+    },
+    { path: '*', component: NotFoundComponent }
   ]
 })
