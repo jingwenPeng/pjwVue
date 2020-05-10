@@ -6,7 +6,7 @@ const state ={
 }
 
 // 定义 getters
-const getters ={
+var getters ={
   count(state){
     return state.count
   }

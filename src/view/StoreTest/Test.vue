@@ -9,7 +9,6 @@
 </template>
 
 <script>
-  import * as types from '../../store/types'
   import { mapGetters, mapActions } from "vuex";
 
   export default {
