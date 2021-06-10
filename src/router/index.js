@@ -8,7 +8,7 @@ export default new Router({
   mode: 'history',
   routes: [
     {
-      path: '/',
+      path: '/Test1',
       name: 'Test1',
       component: () => import('@/view/otherTest/Test1')
     },
@@ -36,6 +36,15 @@ export default new Router({
       component: () => import('@/view/otherTest/Test1'),
       meta: {
         title: 'StoreTest',
+        icon: 'test'
+      }
+    },
+    {
+      path: '/',
+      name: 'menuTest',
+      component: () => import('@/view/menuTest/index'),
+      meta: {
+        title: 'menuTest',
         icon: 'test'
       }
     },
