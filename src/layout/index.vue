@@ -1,5 +1,7 @@
 <template>
   <div>
+    <el-container>
+      <el-header>
         <el-menu :default-active="activeIndex2" class="el-menu-demo" mode="horizontal" @select="handleSelect" background-color="#545c64" text-color="#fff" :router="true" active-text-color="#ffd04b">
           <el-menu-item index="/Test1">处理中心</el-menu-item>
           <el-submenu index="2">
@@ -17,7 +19,11 @@
           <el-menu-item index="3" disabled>消息中心</el-menu-item>
           <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">订单管理</a></el-menu-item>
         </el-menu>
+      </el-header>
+      <el-main>
         <router-view />
+      </el-main>
+    </el-container>
 
     <!--<button v-on:click="show = !show">
       Toggle
