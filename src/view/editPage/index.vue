@@ -1,6 +1,6 @@
 <template>
   <div>
-    哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+    哈哈哈哈哈哈哈
     {{detail}}
     <comp-edit v-model="detail" :isClear="isClear" @change="change"></comp-edit>
   </div>
