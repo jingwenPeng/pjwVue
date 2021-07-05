@@ -95,6 +95,27 @@ export default {
         theme: 'snow',                // 使用主题样式
         placeholder: '请输入内容'
       })
+      const _this = this
+      this.quills.on('selection-change', function(range, oldRange, source) {
+        if (range) {
+          if (range.length == 0) {
+            console.log('User cursor is on', range.index);
+          } else {
+            var text = _this.quills.getText(range.index, range.length);
+            console.log('User has highlighted', text);
+          }
+        } else {
+          console.log('Cursor not in the editor');
+        }
+      });
+      this.quills.on('text-change', function(delta, oldDelta, source) {
+        if (source == 'api') {
+          console.log("An API call triggered this change.");
+        } else if (source == 'user') {
+          console.log(delta, oldDelta, source)
+          console.log("A user action triggered this change.");
+        }
+      });
     })
   },
   methods: {

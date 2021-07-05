@@ -30,7 +30,7 @@
     },
     mounted() {
       this.$nextTick(() => {
-        this.$refs.quillEdit.focusIndex()
+        // this.$refs.quillEdit.focusIndex()
       })
     }
   }
